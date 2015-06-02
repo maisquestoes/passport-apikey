@@ -1,6 +1,6 @@
 {
   "name": "passport-apikey",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Local api key authentication strategy for Passport.",
   "author": { "name": "Sudhakar Mani", "email": "mail4sudhakar@gmail.com", "url": "http://www.sudhakarmani.com/" },
   "repository": {

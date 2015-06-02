@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/iojs', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.9.0
+3 info using node@v2.0.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/henricavalcante/git/maisquestoes/passport-apikey',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/henricavalcante/.npm/passport-apikey/0.0.4/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/henricavalcante/.npm/passport-apikey/0.0.4/package.tgz',
+9 verbose tar pack   '/Users/henricavalcante/git/maisquestoes/passport-apikey' ]
+10 verbose tarball /Users/henricavalcante/.npm/passport-apikey/0.0.4/package.tgz
+11 verbose folder /Users/henricavalcante/git/maisquestoes/passport-apikey
+12 info prepublish passport-apikey@0.0.4
+13 verbose addLocalTarball adding from inside cache /Users/henricavalcante/.npm/passport-apikey/0.0.4/package.tgz
+14 silly cache afterAdd passport-apikey@0.0.4
+15 verbose afterAdd /Users/henricavalcante/.npm/passport-apikey/0.0.4/package/package.json not in flight; writing
+16 verbose afterAdd /Users/henricavalcante/.npm/passport-apikey/0.0.4/package/package.json written
+17 silly publish { name: 'passport-apikey',
+17 silly publish   version: '0.0.4',
+17 silly publish   description: 'Local api key authentication strategy for Passport.',
+17 silly publish   author:
+17 silly publish    { name: 'Sudhakar Mani',
+17 silly publish      email: 'mail4sudhakar@gmail.com',
+17 silly publish      url: 'http://www.sudhakarmani.com/' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+ssh://git@github.com/maisquestoes/passport-apikey.git' },
+17 silly publish   bugs: { url: 'https://github.com/maisquestoes/passport-apikey/issues' },
+17 silly publish   main: './lib/passport-apikey',
+17 silly publish   dependencies: { pkginfo: '0.2.x', passport: '~0.1.1' },
+17 silly publish   devDependencies: { vows: '0.7.x' },
+17 silly publish   scripts: { test: 'NODE_PATH=lib node_modules/.bin/vows test/*-test.js' },
+17 silly publish   engines: { node: '>= 0.4.0' },
+17 silly publish   licenses: [ { type: 'MIT', url: 'http://www.opensource.org/licenses/MIT' } ],
+17 silly publish   keywords:
+17 silly publish    [ 'passport',
+17 silly publish      'passport apikey',
+17 silly publish      'local apikey',
+17 silly publish      'auth',
+17 silly publish      'authn',
+17 silly publish      'authentication' ],
+17 silly publish   readme: '# Passport-LocalAPIKey\n\n[Passport](http://passportjs.org/) strategy for authenticating with a apikey.\n\nThis module lets you authenticate using a apikey in your Node.js\napplications which is used to build rest apis.By plugging into Passport, local apikey authentication can be easily and\nunobtrusively integrated into any application or framework that supports\n[Connect](http://www.senchalabs.org/connect/)-style middleware, including\n[Express](http://expressjs.com/).\n\n## Installation\n\n    $ npm install passport-apikey\n\n## Usage\n\n#### Configure Strategy\n\nThe local api key authentication strategy authenticates users using a apikey.  \nThe strategy requires a `verify` callback, which accepts these\ncredentials and calls `done` providing a user.\n\n    passport.use(new APIKeyStrategy(\n      function(apikey, done) {\n        User.findOne({ apikey: apikey }, function (err, user) {\n          if (err) { return done(err); }\n          if (!user) { return done(null, false); }\n          return done(null, user);\n        });\n      }\n    ));\n\n#### Authenticate Requests\n\nUse `passport.authenticate()`, specifying the `\'apikey\'` strategy, to\nauthenticate requests.\n\nFor example, as route middleware in an [Express](http://expressjs.com/)\napplication:\n\n    app.post(\'/api/authenticate\', \n      passport.authenticate(\'apikey\', { session: false,failureRedirect: \'/api/unauthorized\' }),\n      function(req, res) {\n        res.json({ message: "Authenticated" })\n      });\n\n## Examples\n\n    curl -v -d "apikey=asdasjsdgfjkjhg" http://127.0.0.1:3000/api/authenticate\n\n## Tests\n\n    $ npm install --dev\n    $ make test\n\n\n\n## Credits\n\n  - [Sudhakar Mani](http://twitter.com/sudhakarmani)\n  - [CholaLabs](https://github.com/cholalabs)\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2012 Sudhakar Mani\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the "Software"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'eac58d83fe202fd857a5dbb6103e46660d9175e3',
+17 silly publish   homepage: 'https://github.com/maisquestoes/passport-apikey#readme',
+17 silly publish   _id: 'passport-apikey@0.0.4',
+17 silly publish   _shasum: '102249364e8729639f15d406c7b509979e302774',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name passport-apikey
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/passport-apikey
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/henricavalcante/.npm/passport-apikey/0.0.4/package.tgz
+25 verbose request uri https://registry.npmjs.org/passport-apikey
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 07:30:34
+28 verbose request using bearer token for auth
+29 verbose request id 74fe3e629778c1ee
+30 http request PUT https://registry.npmjs.org/passport-apikey
+31 http 403 https://registry.npmjs.org/passport-apikey
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=60',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Tue, 02 Jun 2015 10:30:35 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-iad2142-IAD',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1433241035.153734,VS0,VE381' }
+33 verbose request invalidating /Users/henricavalcante/.npm/registry.npmjs.org/passport-apikey on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 0.0.4." : passport-apikey
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:368:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1219:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:166:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1167:12)
+35 verbose stack     at emitNone (events.js:72:20)
+36 verbose statusCode 403
+37 verbose pkgid passport-apikey
+38 verbose cwd /Users/henricavalcante/git/maisquestoes/passport-apikey
+39 error Darwin 14.3.0
+40 error argv "/usr/local/bin/iojs" "/usr/local/bin/npm" "publish"
+41 error node v2.0.1
+42 error npm  v2.9.0
+43 error code E403
+44 error "You cannot publish over the previously published version 0.0.4." : passport-apikey
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
