@@ -1,16 +1,16 @@
 {
-  "name": "passport-localapikey",
+  "name": "passport-apikey",
   "version": "0.0.4",
   "description": "Local api key authentication strategy for Passport.",
   "author": { "name": "Sudhakar Mani", "email": "mail4sudhakar@gmail.com", "url": "http://www.sudhakarmani.com/" },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cholalabs/passport-localapikey.git"
+    "url": "git@github.com:maisquestoes/passport-apikey.git"
   },
   "bugs": {
-    "url": "https://github.com/cholalabs/passport-localapikey/issues"
+    "url": "https://github.com/maisquestoes/passport-apikey/issues"
   },
-  "main": "./lib/passport-localapikey",
+  "main": "./lib/passport-apikey",
   "dependencies": {
     "pkginfo": "0.2.x",
     "passport": "~0.1.1"

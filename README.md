@@ -10,7 +10,7 @@ unobtrusively integrated into any application or framework that supports
 
 ## Installation
 
-    $ npm install passport-localapikey
+    $ npm install passport-apikey
 
 ## Usage
 
@@ -20,7 +20,7 @@ The local api key authentication strategy authenticates users using a apikey.
 The strategy requires a `verify` callback, which accepts these
 credentials and calls `done` providing a user.
 
-    passport.use(new LocalAPIKeyStrategy(
+    passport.use(new APIKeyStrategy(
       function(apikey, done) {
         User.findOne({ apikey: apikey }, function (err, user) {
           if (err) { return done(err); }
@@ -32,14 +32,14 @@ credentials and calls `done` providing a user.
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'localapikey'` strategy, to
+Use `passport.authenticate()`, specifying the `'apikey'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
     app.post('/api/authenticate', 
-      passport.authenticate('localapikey', { session: false,failureRedirect: '/api/unauthorized' }),
+      passport.authenticate('apikey', { session: false,failureRedirect: '/api/unauthorized' }),
       function(req, res) {
         res.json({ message: "Authenticated" })
       });
@@ -53,11 +53,12 @@ application:
     $ npm install --dev
     $ make test
 
-[![Build Status](https://secure.travis-ci.org/cholalabs/passport-localapikey.png)](http://travis-ci.org/cholalabs/passport-localapikey)
+
 
 ## Credits
 
   - [Sudhakar Mani](http://twitter.com/sudhakarmani)
+  - [CholaLabs](https://github.com/cholalabs)
 
 ## License
 
